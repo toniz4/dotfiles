@@ -1,0 +1,4 @@
+#!/bin/sh
+# Prompt labeled $1 command $2
+
+[ $(echo -e "No\nYes" | dmenu -h 18 -i -p "$1") == "Yes" ] && $2

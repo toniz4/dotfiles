@@ -1,0 +1,15 @@
+#!/bin/sh
+# Configuration files dmenu
+
+sel=$(echo -e "polybar\nsxhkd\nbspwm\nkitty\ndunst\npicom\nzsh\nalacritty" | dmenu -h 18 -i -p "configs")
+
+case $sel in 
+	polybar) $TERMINAL $EDITOR .config/polybar/config;;
+	sxhkd) $TERMINAL $EDITOR .config/sxhkd/sxhkdrc;;
+	bspwm) $TERMINAL $EDITOR .config/bspwm/bspwmrc;;
+	kitty) $TERMINAL $EDITOR .config/kitty/kitty.conf;;
+	dunst) $TERMINAL $EDITOR .config/dunst/dunstrc;;
+	picom) $TERMINAL $EDITOR .config/picom.conf;;
+	zsh) $TERMINAL $EDITOR .config/zsh/.zshrc;;
+	alacritty) $TERMINAL $EDITOR .config/alacritty/alacritty.yml
+esac
