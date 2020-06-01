@@ -1,0 +1,6 @@
+#!/bin/sh
+
+xlight=$(sensors | xbacklight | sed 's/\.[0-9]*$//')
+icon=""
+
+printf "%s %s%%\n" "$icon" "$xlight"

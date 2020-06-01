@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mpc status | grep -q playing && playing=$(mpc status | sed 1q)
+
+icon=""
+
+printf "%s %s\n" "$icon" "$playing"

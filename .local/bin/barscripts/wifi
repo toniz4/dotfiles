@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
+	down) wifiicon="📡 " ;;
+	up) wifiicon=" "
+esac
+
+printf "%s%s%s\n" "$wifiicon" "$(nmcli connection show | awk '/wifi/ {print $1}')" "$(sed "s/down//;s/up//" /sys/class/net/w*/operstate 2>/dev/null)"
