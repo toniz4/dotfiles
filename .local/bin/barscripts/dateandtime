@@ -1,8 +1,0 @@
-#!/bin/sh
-
-#dateandtime=$(date '+%Y %b %d (%a)')
-
-iconclock=""
-iconcalendar=""
-
-printf "%s %s %s %s\n" "$iconcalendar" "$(LC_ALL=pt_BR.utf8 date '+%Y %b %d (%a)')" "$iconclock" "$(date '+%H:%M')"

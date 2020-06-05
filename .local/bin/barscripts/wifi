@@ -1,8 +1,11 @@
 #!/bin/sh
 
+color="^c#b294bb^"
+
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-	down) wifiicon="📡 " ;;
-	up) wifiicon=" "
+	down) wifiicon="X" && color="^#cc6666^" ;;
+	up) wifiicon=""
 esac
 
-printf "%s%s%s\n" "$wifiicon" "$(nmcli connection show | awk '/wifi/ {print $1}')" "$(sed "s/down//;s/up//" /sys/class/net/w*/operstate 2>/dev/null)"
+
+printf "%s%s %s%s\n" "$color" "$wifiicon" "$(nmcli connection show | awk '/wifi/ {print $1}')" "^d^"

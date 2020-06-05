@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#dateandtime=$(date '+%Y %b %d (%a)')
+
+iconcalendar=""
+colorcalendar="^c#81a2be^"
+
+printf "%s%s %s%s\n" "$colorcalendar" "$iconcalendar" "$(LC_ALL=pt_BR.utf8 date '+%Y %b %d (%a)')" "^d^"

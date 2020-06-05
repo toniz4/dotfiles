@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#dateandtime=$(date '+%Y %b %d (%a)')
+
+icon=""
+color="^c#8abeb7^"
+
+printf "%s%s %s%s\n" "$color" "$icon" "$(date '+%H:%M')" "^d^" 
+

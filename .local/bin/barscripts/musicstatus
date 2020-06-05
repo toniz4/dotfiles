@@ -1,7 +1,9 @@
 #!/bin/sh
 
-mpc status | grep -q playing && playing=$(mpc status | sed 1q)
+icon=""
+color="^c#b5bd68^"
 
-icon=""
+mpc status | grep -q playing && playing=$(mpc status | sed 1q) && icon="" && printf "%s%s%s %s\n" "$color" "$icon" "^d^" "$playing"
 
-printf "%s %s\n" "$icon" "$playing"
+
+

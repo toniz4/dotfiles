@@ -8,18 +8,20 @@ if [ $mute = "true" ]; then
 	vol="muted"
 else 
 	if [ "$vol" -gt "70" ]; then
-		icon=""
+		icon=""
 		vol="$vol%"
 	elif [ "$vol" -lt "30" ]; then
-		icon=""
+		icon=""
 		vol="$vol%"
 	else
-		icon=""
+		icon=""
 		vol="$vol%"
 	fi
 fi
 
-printf "%s %s\n" "$icon" "$vol"
+color="^c#f0c674^"
+
+printf "%s%s %s%s\n" "$color" "$icon" "$vol" "^d^"
 
 
 
