@@ -1,9 +1,5 @@
 #!/bin/sh
 
-case $BUTTON in
-    1) ;;
-esac
-
 color="^c#b294bb^"
 
 case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in

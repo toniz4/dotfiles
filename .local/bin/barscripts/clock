@@ -1,10 +1,5 @@
 #!/bin/sh
 
-case $BUTTON in
-    1) ;;
-esac
-#dateandtime=$(date '+%Y %b %d (%a)')
-
 icon=""
 color="^c#8abeb7^"
 

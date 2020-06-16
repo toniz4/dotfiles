@@ -1,8 +1,4 @@
 #!/bin/sh
-
-case $BUTTON in
-    1) ;;
-esac
     
 xlight=$(sensors | xbacklight | sed 's/\.[0-9]*$//')
 icon=""
