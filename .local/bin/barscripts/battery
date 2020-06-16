@@ -1,5 +1,9 @@
 #!/bin/sh
 
+case $BUTTON in
+    1) ;;
+esac
+
 capacity=$(cat /sys/class/power_supply/BAT0/capacity) || break
 stats=$(sed "s/[Dd]ischarging//;s/[Nn]ot charging//;s/[Cc]harging//;s/[Uu]nknown//;s/[Ff]ull//" /sys/class/power_supply/BAT0/status)
 

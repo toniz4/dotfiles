@@ -1,5 +1,14 @@
 #!/bin/sh
 
+case $BUTTON in
+    1) $TERMINAL -e calcurse;;
+    2) ;;
+    3) ;;
+    4) ;;
+    5) ;;
+    6) ;;
+esac
+
 #dateandtime=$(date '+%Y %b %d (%a)')
 
 iconcalendar=""
