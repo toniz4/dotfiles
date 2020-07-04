@@ -1,0 +1,12 @@
+#!/bin/sh
+
+temp=$(sensors | awk '/^Core 0/{print $3}' | sed s/+//)
+icon=""
+
+if [ $(cat /sys/class/thermal/thermal_zone1/temp) -ge 87000 ]; then
+    color="^c#cc6666^"
+else
+    color="^c#8abeb7^"
+fi
+
+printf "%s%s %s%s\n" "$color" "$icon" "$temp" "^d^"

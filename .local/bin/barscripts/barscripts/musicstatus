@@ -1,0 +1,16 @@
+#!/bin/sh
+
+icon=""
+color="^c#b5bd68^"
+
+mpc status | grep -q playing && \
+
+playing=$(mpc | awk 'NR==1 && !/^volume:/ { printf "%.'28's", $0
+if (length($0)>'28') printf "..." }') && icon="" && \
+
+printf "%s%s%s %s\n" "$color" "$icon" "^d^" "$playing"
+
+
+
+
+

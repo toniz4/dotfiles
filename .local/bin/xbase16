@@ -1,0 +1,12 @@
+#!/bin/sh
+
+term="256"
+url="https://raw.githubusercontent.com/chriskempson/base16-xresources/master/xresources/"
+url="${url}base16-$BASE16_THEME-$term.Xresources"
+
+if [ "$(curl -s $url)" != "404: Not Found" ]; then 
+    curl -s $url > ~/.config/X11/xresources
+    echo "Downloaded base16-$BASE16_THEME-$term.Xresources"
+else
+    echo "base16-$BASE16_THEME-$term.Xresources is not found"
+fi
