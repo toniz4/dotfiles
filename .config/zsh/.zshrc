@@ -35,7 +35,6 @@ autoload predict-on
 
 # Aliases
 source $HOME/.config/zsh/zshalias
-#source $HOME/.config/zsh/.gitplugin.zsh
 
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
