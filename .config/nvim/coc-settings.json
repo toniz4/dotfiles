@@ -1,0 +1,4 @@
+{
+    "clangd.semanticHighlighting": true,
+	"python.pythonPath": "/usr/bin/python"
+}

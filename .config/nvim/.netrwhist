@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/cassio/doc/exerciciosfacul/3lista'
+let g:netrw_dirhist_4='/etc/portage/package.env'
+let g:netrw_dirhist_3='/home/cassio/.local/share/applications'
+let g:netrw_dirhist_2='/home/cassio/.config/lf'
+let g:netrw_dirhist_1='/home/cassio/.local/share/mime/packages'
+let g:netrw_dirhist_0='/home/cassio/.local/share/mime/application'
+let g:netrw_dirhist_9='/home/cassio/.local/share/mime'
+let g:netrw_dirhist_8='/var/db/repos/gentoo/profiles/default/linux/amd64/17.1'
+let g:netrw_dirhist_7='/var/db/repos/gentoo/profiles/default/linux'
+let g:netrw_dirhist_6='/var/db/repos/gentoo/profiles/default/linux/amd64'
