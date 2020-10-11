@@ -1,0 +1,17 @@
+alias grep='grep --color'
+alias mv='mv -vi'
+alias cp='cp -riv'
+alias mv='mv -vi'
+alias rm="rm -vI"
+alias ls='ls --color=auto --group-directories-first'
+alias la='ls -A'
+alias ll='ls -lh'
+alias lla='ll -A'
+alias graph="git log --all --decorate --oneline --graph"
+alias calcurse="LC_ALL=pt_BR.utf8 calcurse"
+alias thanks='echo "no problem"'
+alias irssi='irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
+alias doas='doas --'
+
+alias makeconf='doas nvim /etc/portage/make.conf'
+alias unmaskconf='doas nvim /etc/portage/package.accept_keywords'
