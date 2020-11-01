@@ -1,0 +1,21 @@
+#!/bin/sh
+
+case "$BUTTON" in
+	1) $TERMINAL -e nmtui;;
+esac
+
+wifiname="$(nmcli connection show | awk '/wifi/ {print $1}')"
+
+case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
+	down) wifiicon="";;
+	up) wifiicon="";;
+esac
+
+ethicon=""
+
+ip="$(ip -4 -o addr show enp0s25 | awk '{print $4}' | cut -d "/" -f 1)"
+
+case "$(cat /sys/class/net/e*/operstate 2>/dev/null)" in
+	down) printf "%s %s\n" "$wifiicon" "$wifiname";;
+	up) printf "%s %s\n" "$ethicon" "$ip";;
+esac

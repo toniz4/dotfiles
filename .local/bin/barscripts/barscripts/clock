@@ -1,7 +1,0 @@
-#!/bin/sh
-
-icon=""
-color="^c#8abeb7^"
-
-printf "%s%s %s%s\n" "$color" "$icon" "$(date '+%H:%M')" "^d^" 
-
